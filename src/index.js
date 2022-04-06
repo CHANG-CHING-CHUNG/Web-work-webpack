@@ -13,7 +13,7 @@ worker.onmessage = ({ data: { answer } }) => {
   console.log('main thread',answer);
 };
 
-fetch('http://localhost:9000/scovano_construction.kml')
+fetch('http://localhost:9000/some.kml')
 .then(data => data.text())
 .then(xml => {
     worker.postMessage({
